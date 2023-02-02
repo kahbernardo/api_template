@@ -34,6 +34,14 @@ server.put('/cursos/:index', (req,res)=>{
     
         return res.json(cursos)
 })
+
+server.delete('/cursos/:index', (req,res)=>{
+    const {index} = req.params;
+        
+    cursos.splice(index,1)
+    
+        return res.json({message:"Curso deletado com sucesso"})
+})
     
 
     
